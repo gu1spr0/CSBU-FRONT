@@ -1,18 +1,43 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
+import { app_routing } from './app.routes'; "./app_routes";
+import { AppRoutingModule,routingComponent } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './plantillas/header/header.component';
+import { FooterComponent } from './plantillas/footer/footer.component';
+//import { LoginComponent } from './vistas/login/login.component';
+//import { DashboardComponent } from './vistas/dashboard/dashboard.component';
+//import { FormulariofiltrarComponent } from './vistas/formulariofiltrar/formulariofiltrar.component';
+import {ReactiveFormsModule,FormsModule} from  '@angular/forms'
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
+import { PaginalogoComponent } from './vistas/paginalogo/paginalogo.component';
+import { PesperaComponent } from './vistas/pespera/pespera.component';
+import { TokenInterceptor } from './token.interceptor';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    routingComponent,
+    PaginalogoComponent,
+    PesperaComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
+    app_routing
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

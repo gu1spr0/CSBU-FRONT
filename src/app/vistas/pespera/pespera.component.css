@@ -1,0 +1,30 @@
+*
+{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    background-color: #ffffff;
+}
+.pagina{
+    justify-content: center;
+    left: 37%;
+    top: 35%;
+    position: absolute;
+}
+h2
+{
+    position: absolute;
+    left: 33%;
+    top: 25%;
+    text-align: center;
+    padding: 10px;
+    color: #004990;
+  margin-top: 5px;
+  font-size: 38px;
+  font-weight: bold;
+  
+  
+ 
+}
