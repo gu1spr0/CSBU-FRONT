@@ -15,13 +15,14 @@ export class WebsocketService {
     }
     _disconnect() {
         if (this.clienteStomp !== null) {
+          console.log("No es nulo");
           this.clienteStomp.disconnect();
         }
         console.log("Disconnected");
       }
-      _send(message:any, cliente:any) {
-          this.clienteStomp.send('/topic/qr', {}, JSON.stringify({ 'name': cliente, 'data': message }));
-      }
+      /*_send(message:any, cliente:any) {
+          this.clienteStomp.send('/test/qr', {}, JSON.stringify({ 'name': cliente, 'data': message }));
+      }*/
     
       onMessageReceived(message: any) {
         console.log("Message Recieved from Server :: " + message);

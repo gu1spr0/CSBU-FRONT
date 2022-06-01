@@ -34,7 +34,9 @@ export class LoginComponent implements OnInit {
    let dataResponse:ResponseI=data;
    console.log(dataResponse);
      localStorage.setItem("token",dataResponse.token);
-     this.router.navigate(['pespera']);
+     localStorage.setItem("agencia",""+dataResponse.id_agencia);
+     localStorage.setItem("canal",""+dataResponse.id_canal);
+     this.router.navigate(['/pespera']);
    
   });
     
