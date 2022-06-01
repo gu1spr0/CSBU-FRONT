@@ -5,14 +5,12 @@ import { AppRoutingModule,routingComponent } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './plantillas/header/header.component';
 import { FooterComponent } from './plantillas/footer/footer.component';
-//import { LoginComponent } from './vistas/login/login.component';
-//import { DashboardComponent } from './vistas/dashboard/dashboard.component';
-//import { FormulariofiltrarComponent } from './vistas/formulariofiltrar/formulariofiltrar.component';
 import {ReactiveFormsModule,FormsModule} from  '@angular/forms'
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { PaginalogoComponent } from './vistas/paginalogo/paginalogo.component';
 import { PesperaComponent } from './vistas/pespera/pespera.component';
 import { TokenInterceptor } from './token.interceptor';
+import { BackofficeComponent, DomainsComponent, UsersComponent } from './vistas/index.paginas';
 
 @NgModule({
   declarations: [
@@ -21,7 +19,10 @@ import { TokenInterceptor } from './token.interceptor';
     FooterComponent,
     routingComponent,
     PaginalogoComponent,
-    PesperaComponent
+    PesperaComponent,
+    BackofficeComponent,
+    DomainsComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,

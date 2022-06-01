@@ -16,7 +16,6 @@ export class PaginalogoComponent implements OnInit {
 
   ngOnInit(): void {
     setTimeout(() => {
-      this.socket._disconnect();
       this.router.navigate(['/pespera']);
   }, 5000);
   }

@@ -7,7 +7,7 @@ import { environment } from "src/environments/environment";
 })
 export class WebsocketService {
     private url = environment.URL_SOCKET;
-    clienteStomp: any = null;
+    clienteStomp: any;
     public connect(){
         let socket = new SockJS(this.url + 'test');
         this.clienteStomp = Stomp.over(socket);
@@ -18,7 +18,7 @@ export class WebsocketService {
           console.log("No es nulo");
           this.clienteStomp.disconnect();
         }
-        console.log("Disconnected");
+        console.log("Ya desconectado");
       }
       /*_send(message:any, cliente:any) {
           this.clienteStomp.send('/test/qr', {}, JSON.stringify({ 'name': cliente, 'data': message }));

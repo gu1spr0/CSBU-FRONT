@@ -3,7 +3,6 @@ import { Component } from '@angular/core';
 import { WebsocketService } from '../../servicios/websocket/websocket.service';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/servicios/api/api.service';
-import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 
 @Component({
   selector: 'app-root',
