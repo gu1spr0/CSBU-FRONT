@@ -7,8 +7,8 @@ import{Observable, observable} from'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  //url:string = "http://178.62.200.136:4701/api/login";
-  url: string = "http://localhost:4701/api/login"
+  url:string = "http://178.62.200.136:4701/api/login";
+  //url: string = "http://localhost:4701/api/login"
   constructor(private http:HttpClient) { }
   loginbyEmail(form:LoginI):Observable<ResponseI>{
     return this.http.post<ResponseI>(this.url,form);
