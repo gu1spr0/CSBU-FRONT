@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  URL_SOCKET: 'http://178.62.200.136:4701/'
-  //URL_SOCKET: 'http://localhost:4701/'
+  //URL_SOCKET: 'http://178.62.200.136:4701/'
+  URL_SOCKET: 'http://localhost:4701/'
 };
 
 /*

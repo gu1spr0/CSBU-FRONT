@@ -5,6 +5,7 @@ import {LoginI} from '../../modelos/login.interface';
 import {Router} from '@angular/router';
 import{ResponseI} from '../../modelos/response.interface'
 import { WebsocketService } from 'src/app/servicios/websocket/websocket.service';
+import { Content } from 'src/app/modelos/content.interface';
 
 
 
@@ -31,12 +32,13 @@ export class LoginComponent implements OnInit {
   }
   onLogin(form:LoginI){
   this.api.loginbyEmail(form).subscribe(data =>{
-   let dataResponse:ResponseI=data;
-   console.log(dataResponse);
-     localStorage.setItem("token",dataResponse.token);
-     localStorage.setItem("agencia",""+dataResponse.id_agencia);
-     localStorage.setItem("canal",""+dataResponse.id_canal);
-     this.router.navigate(['/pespera']);
+   let content:Content=data;
+   console.log(content);
+   localStorage.clear();
+   localStorage.setItem("token",content.data.token);
+   localStorage.setItem("agencia",""+content.data.idChannel);
+   localStorage.setItem("canal",""+content.data.idAgency);
+   this.router.navigate(['/pespera']);
    
   });
     

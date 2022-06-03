@@ -1,17 +1,23 @@
 import { Injectable } from '@angular/core';
 import{ LoginI } from '../../modelos/login.interface';
 import{ ResponseI } from'../../modelos/response.interface';
-import{HttpClient, HttpHeaders} from '@angular/common/http';
+import{HttpBackend, HttpClient, HttpHeaders} from '@angular/common/http';
 import{Observable, observable} from'rxjs';
+import { Content } from 'src/app/modelos/content.interface';
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
-  url:string = "http://178.62.200.136:4701/api/login";
-  //url: string = "http://localhost:4701/api/login"
-  constructor(private http:HttpClient) { }
-  loginbyEmail(form:LoginI):Observable<ResponseI>{
-    return this.http.post<ResponseI>(this.url,form);
+  //url:string = "http://178.62.200.136:4701/api/login";
+  url: string = "http://localhost:4701/api/users/v1/login"
+  constructor(
+    private http: HttpClient,
+    private handler: HttpBackend) { 
+      this.http = new HttpClient(this.handler);
+    }
+
+  loginbyEmail(form:LoginI):Observable<Content>{
+    return this.http.post<Content>(this.url,form);
   }
    isLoginUser(): boolean {
     return !!localStorage.getItem('token');
