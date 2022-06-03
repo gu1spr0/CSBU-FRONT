@@ -8,8 +8,8 @@ import { Content } from 'src/app/modelos/content.interface';
   providedIn: 'root'
 })
 export class ApiService {
-  //url:string = "http://178.62.200.136:4701/api/login";
-  url: string = "http://localhost:4701/api/users/v1/login"
+  url:string = "http://178.62.200.136:4701/api/users/v2/login";
+  //url: string = "http://localhost:4701/api/users/v1/login"
   constructor(
     private http: HttpClient,
     private handler: HttpBackend) { 
