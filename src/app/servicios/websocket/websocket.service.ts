@@ -6,7 +6,7 @@ import { environment } from "src/environments/environment";
     providedIn: 'root'
 })
 export class WebsocketService {
-    private url = environment.URL_SOCKET;
+    private url = environment.URL_API;
     clienteStomp: any;
     public connect(){
         let socket = new SockJS(this.url + 'test');

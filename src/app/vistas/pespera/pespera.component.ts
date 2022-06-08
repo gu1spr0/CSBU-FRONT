@@ -23,9 +23,11 @@ export class PesperaComponent {
   ) {
     if (api.getUserTokken()) {
       let stompClient = this.socket.connect();
-      stompClient.connect({}, (frame: any) => {
-        stompClient.subscribe('/topic/'+api.getUserAgency()+'/'+api.getUserChannel(), (notifications: any) => {
-          this.showGreeting(notifications.body);
+      stompClient.connect({"X-Authorization":"Bearer "+api.getUserTokken()}, (frame: any) => {
+        //stompClient.subscribe('/topic/'+api.getUserAgency()+'/'+api.getUserChannel(), (notifications: any) => {
+        stompClient.subscribe('/user/queue/'+this.api.getUserAgency()+'/'+this.api.getUserChannel(), (notifications: any) => {
+          console.log(notifications)
+          //this.showGreeting(notifications);
         });
       });
     }

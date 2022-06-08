@@ -36,8 +36,8 @@ export class LoginComponent implements OnInit {
    console.log(content);
    localStorage.clear();
    localStorage.setItem("token",content.data.token);
-   localStorage.setItem("agencia",""+content.data.idChannel);
-   localStorage.setItem("canal",""+content.data.idAgency);
+   localStorage.setItem("agencia",""+content.data.idAgency);
+   localStorage.setItem("canal",""+content.data.idChannel);
    this.router.navigate(['/pespera']);
    
   });
