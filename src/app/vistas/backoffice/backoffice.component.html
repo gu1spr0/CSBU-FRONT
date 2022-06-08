@@ -3,155 +3,137 @@
  
 <style>
     body{
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-}
-
-
-
-.left_area h3{
-  color: #fff;
-  margin: 0;
-  text-transform: uppercase;
-  font-size: 22px;
-  font-weight: 900;
-}
-
-.left_area span{
-  color: #19B3D3;
-}
-
-.logout_btn{
-  padding: 5px;
-  background: #19B3D3;
-  text-decoration: none;
-  float: right;
-  margin-top: -30px;
-  margin-right: 40px;
-  border-radius: 2px;
-  font-size: 15px;
-  font-weight: 600;
-  color: #fff;
-  transition: 0.5s;
- 
-}
-
-
-
-.sidebar {
-  background: #29aae1;
-  top: 0%;
-  padding-top: 30px;
-  position: fixed;
-  left: 0;
-  width: 250px;
-  height: 100%;
-  transition: 0.5s;
-  transition-property: left;
-}
-
-.sidebar .profile_image{
-  width: 100px;
-  height: 100px;
-  border-radius: 100px;
-  margin-bottom: 10px;
-}
-
-.sidebar h4{
-  color: #ccc;
-  margin-top: 0;
-  margin-bottom: 20px;
-}
- h1{
-  color: #004890;
-  margin-top: 0;
-  margin-bottom: 20px;
-}
-
-.sidebar a{
-  color: #fff;
-  display: block;
-  width: 100%;
-  line-height: 60px;
-  text-decoration: none;
-  padding-left: 40px;
-  box-sizing: border-box;
-  transition: 0.5s;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+  }
   
-}
-
-.sidebar a:hover{
-  background: #00489073;
-}
-
-.sidebar i{
-  padding-right: 10px;
-}
-
-label #sidebar_btn{
-  z-index: 1;
-  color: #fff;
-  position: fixed;
-  cursor: pointer;
-  left: 300px;
-  font-size: 20px;
-  margin: 5px 0;
-  transition: 0.5s;
-  transition-property: color;
-}
-
-label #sidebar_btn:hover{
-  color: #19B3D3;
-}
-
-#check:checked ~ .sidebar{
-  left: -190px;
-}
-
-#check:checked ~ .sidebar a span{
-  display: none;
-}
-
-#check:checked ~ .sidebar a{
-  font-size: 20px;
-  margin-left: 170px;
-  width: 80px;
-}
-
-.content{
-  margin-left: 750px;
-  background: url(background.png) no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
-  transition: 0.5s;
-}
-
-#check:checked ~ .content{
-  margin-left: 60px;
-}
-
-#check{
-  display: none;
-}
+  
+  
+  .left_area h3{
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 900;
+  }
+  
+  .left_area span{
+    color: #19B3D3;
+  }
+  
+  .sidebar {
+    background: #29aae1;
+    top: 0%;
+    padding-top: 30px;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    transition: 0.5s;
+    transition-property: left;
+    
+  }
+  
+   h1{
+    color: #004890;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar a{
+    color: #fff;
+    display: block;
+    width: 100%;
+    line-height: 60px;
+    text-decoration: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    margin-top: 5%;
+   
+   
+    
+  }
+  .sidebar img{
+    margin-left: 2%;
+    width :240px;
+    height:110px;
+  }
+  
+  .sidebar a:hover{
+    background: #00489073;
+  }
+  
+  .sidebar i{
+   
+   left: 2px;
+  }
+  
+  label #sidebar_btn{
+    z-index: 1;
+    color: #fff;
+    position: fixed;
+    cursor: pointer;
+    left: 300px;
+    font-size: 20px;
+    margin: 5px 0;
+    transition: 0.5s;
+    transition-property: color;
+  }
+  
+  label #sidebar_btn:hover{
+    color: #19B3D3;
+  }
+  
+  #check:checked ~ .sidebar{
+    left: -190px;
+  }
+  
+  #check:checked ~ .sidebar a span{
+    display: none;
+  }
+  
+  #check:checked ~ .sidebar a{
+    font-size: 20px;
+    margin-left: 170px;
+    width: 80px;
+  }
+  
+  .content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 150px;
+  }
+  
+  #check:checked ~ .content{
+    margin-left: 60px;
+  }
+  
+  #check{
+    display: none;
+  }
 
 </style>  
 
 
 <body>
 
-    <div class="sidebar">
+  <div class="sidebar">
      
         
-        <h1>BANCO UNIÓN</h1>
-      
-      <a routerLink="/domains"><i class="fas fa-table"></i><span>Dominios</span></a>
-      <a routerLink="/users"><i class="fas fa-table"></i><span>Usuarios</span></a>
-      <a routerLink="/users"><i class="fas fa-table"></i><span>Roles</span></a>
-      <a routerLink="/formulariofiltrar"><i class="fas fa-table"></i><span>Reportes</span></a>
-      
-    </div>
+    
+    <img  src="https://www.bancounion.com.bo/Imagenes/bancounionnew.png" alt="">
+   
+ 
+<a routerLink="/domains"><i class="fas fa-bookmark"></i><span> Dominios</span></a>
+<a routerLink="/users"><i class="fas fa-user"></i><span>Usuarios</span></a>
+<a routerLink="/users"><i class="fas fa-address-card"></i><span>Roles</span></a>
+<a routerLink="/formulariofiltrar"><i class="fas fa-calendar-alt"></i><span>Reportes</span></a>
+
+</div>
     
 
     <div class="content">

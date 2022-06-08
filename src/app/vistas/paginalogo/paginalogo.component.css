@@ -9,14 +9,15 @@
 }
 .pagina{
     justify-content: center;
-    left: 37%;
-    top: 35%;
+    left: 33%;
+    top: 37%;
     position: absolute;
 }
 h2
 {
+    
     position: absolute;
-    left: 33%;
+    left: 27%;
     top: 25%;
     text-align: center;
     padding: 10px;

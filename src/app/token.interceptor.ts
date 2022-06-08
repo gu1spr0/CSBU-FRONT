@@ -19,7 +19,7 @@ export class TokenInterceptor implements HttpInterceptor {
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
     const token = localStorage.getItem('token');
-    console.log("Obteniendo token:"+token);
+    console.log("Obteniendo token");
     let request = req;
 
     if (token) {
@@ -30,7 +30,7 @@ export class TokenInterceptor implements HttpInterceptor {
         },
       });
     }
-    
+
     return next.handle(request).pipe(
       catchError((err: HttpErrorResponse) => {
         if (err.status === 401) {

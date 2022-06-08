@@ -9,22 +9,7 @@
 }
 .pagina{
     justify-content: center;
-    left: 37%;
-    top: 35%;
-    position: absolute;
-}
-h2
-{
-    position: absolute;
     left: 33%;
-    top: 25%;
-    text-align: center;
-    padding: 10px;
-    color: #004990;
-  margin-top: 5px;
-  font-size: 38px;
-  font-weight: bold;
-  
-  
- 
+    top: 37%;
+    position: absolute;
 }

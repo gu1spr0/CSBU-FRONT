@@ -12,6 +12,7 @@ import { PesperaComponent } from './vistas/pespera/pespera.component';
 import { TokenInterceptor } from './token.interceptor';
 import { BackofficeComponent, DomainsComponent, UsersComponent } from './vistas/index.paginas';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import { BackofficeComponent, DomainsComponent, UsersComponent } from './vistas/
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    app_routing
+    app_routing,
+  
   ],
   providers: [
     {
