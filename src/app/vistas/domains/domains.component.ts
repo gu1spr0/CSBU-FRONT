@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/servicios/api/api.service';
 
 @Component({
   selector: 'app-domains',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DomainsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
   }
-
+  onLogout ():void{
+    this.apiService.logout();
+  }
 }
