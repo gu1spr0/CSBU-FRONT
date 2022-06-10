@@ -1,273 +1,243 @@
-<style>
-  body{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  
-  
-  .left_area h3{
-    color: #fff;
-    margin: 0;
-    text-transform: uppercase;
-    font-size: 22px;
-    font-weight: 900;
-  }
-  
-  .left_area span{
-    color: #19B3D3;
-  }
-  
-  .sidebar {
-    background: #29aae1;
-    top: 0%;
-    padding-top: 30px;
-    position: fixed;
-    left: 0;
-    width: 250px;
-    height: 100%;
-    transition: 0.5s;
-    transition-property: left;
-  }
-  
-   h1{
-    color: #004890;
-    margin-top: 0;
-    margin-bottom: 20px;
-  }
-  
-  .sidebar a{
-    color: #fff;
-    display: block;
-    width: 100%;
-    line-height: 60px;
-    text-decoration: none;
-    padding-left: 40px;
-    box-sizing: border-box;
-    transition: 0.5s;
-    margin-top: 5%;
-   
-   
-    
-  }
-  .sidebar img{
-    margin-left: 2%;
-    width :240px;
-    height:110px;
-  }
-  
-  .sidebar a:hover{
-    background: #00489073;
-  }
-  
-  .sidebar i{
-   
-   left: 2px;
-  }
-  
-  label #sidebar_btn{
-    z-index: 1;
-    color: #fff;
-    position: fixed;
-    cursor: pointer;
-    left: 300px;
-    font-size: 20px;
-    margin: 5px 0;
-    transition: 0.5s;
-    transition-property: color;
-  }
-  
-  label #sidebar_btn:hover{
-    color: #19B3D3;
-  }
-  
-  #check:checked ~ .sidebar{
-    left: -190px;
-  }
-  
-  #check:checked ~ .sidebar a span{
-    display: none;
-  }
-  
-  #check:checked ~ .sidebar a{
-    font-size: 20px;
-    margin-left: 170px;
-    width: 80px;
-  }
-  
-  .content{
-    margin-left: 750px;
-    background: url(background.png) no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
-    transition: 0.5s;
-  }
-  
-  #check:checked ~ .content{
-    margin-left: 60px;
-  }
-  
-  #check{
-    display: none;
-  }
-  
-  
-      .main-section{
-      margin:0 auto;
-      margin-top:15%;
-      left:8%;
-      }
-      .card{
-      opacity: .95;
-     
-      }
-      .card-header{
-        background-color: #29aae1;;
-      }
-      .card-body{
-      background-color: #ffffff;
-      box-shadow: 0px 0px 3px #ece9e9;
-      }
-      .table-responsive {
-        background-color: #ffffff00;;
-      }
-  
-      label{
-      font-weight: bold;
-      }
-  
-      .nav-tabs .nav-item a:not(.active){
-      background-color: #d1d3d4;
-      }
-  
-      .nav-tabs{
-      border-bottom:0px;
-      }
-      h4 
-      { 
-    color: #004890;
-    
-      }
-</style>
 
-
-
-<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	
-	
-	<link rel="stylesheet"
-		href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<script
-		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<script 
-		src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script 
-		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	
-    
-	<link rel="stylesheet"
-		href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
-	<script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-
-	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-	<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
-	
-
-<body>
-  <div class="sidebar">
-     
-        
-    
-    <img  src="https://www.bancounion.com.bo/Imagenes/bancounionnew.png" alt="">
- 
- 
-<a routerLink="/domains"><i class="fas fa-bookmark"></i><span> Dominios</span></a>
-<a routerLink="/users"><i class="fas fa-user"></i><span>Usuarios</span></a>
-<a routerLink="/users"><i class="fas fa-address-card"></i><span>Roles</span></a>
-<a routerLink="/formulariofiltrar"><i class="fas fa-calendar-alt"></i><span>Reportes</span></a>
-
-</div>
-
-
-	<div class="container">
-	<div class="mx-auto col-sm-8 main-section" id="myTab" role="tablist">
-		<ul class="nav nav-tabs justify-content-end">
-			<li class="nav-item">
-			<a class="nav-link active" id="list-tab" data-toggle="tab" href="#list" role="tab" aria-controls="list" aria-selected="false">Lista</a>
-			</li>
-			<li class="nav-item">
-			<a class="nav-link" id="form-tab" data-toggle="tab" href="#form" role="tab" aria-controls="form" aria-selected="true">Agregar</a>				   	
-			</li>
-		</ul>
-		<div class="tab-content" id="myTabContent">
-			<div class="tab-pane fade show active" id="list" role="tabpanel" aria-labelledby="list-tab">
-				<div class="card">
-					<div class="card-header">
-						<h4>LISTA DOMINIOS</h4>
-					</div>
-					<div class="card-body">
-						<div class="table-responsive">
-							<table id="userList" class="table table-bordered table-hover table-striped">
-								<thead class="thead-light">
-								<tr>
-									<th scope="col">#</th>
-									<th scope="col">Dominio </th>
-								</tr>
-								</thead>
-								<tbody>
-								<tr>
-									<th scope="row">1</th>
-									<td>Dominio1</td>
-									
-								</tr>
-								</tbody>
-							</table>
-						</div>
-
-					</div>
-				</div>
-			</div>
-			<div class="tab-pane fade" id="form" role="tabpanel" aria-labelledby="form-tab">
-				<div class="card">
-					<div class="card-header">
-						<h4>AGREGAR</h4>
-					</div>
-					<div class="card-body">
-						<form class="form" role="form" autocomplete="off">
-							<div class="form-group row">
-								<label class="col-lg-3 col-form-label form-control-label">Dominio</label>
-								<div class="col-lg-9">
-									<input class="form-control" type="text" >
-								</div>
-							</div>
-							<div class="form-group row">
-								<label class="col-lg-3 col-form-label form-control-label">Contraseña</label>
-								<div class="col-lg-9">
-									<input class="form-control" type="text" >
-								</div>
-							</div>
-
-							<div class="form-group row">
-								<div class="col-lg-12 text-center">
-									<input type="reset" class="btn btn-secondary" value="Cancelar">
-									<input type="button" class="btn btn-primary"
-										value="Guardar">
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-</body>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
- 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+
+<style>
+ body{
+  
+  font-family: 'Poppins', sans-serif;
+}
+
+.head{
+position: fixed;
+background: #004990;
+padding: 20px;
+width: 100%;
+height: 65px;
+left: 0%;
+top: 0%;
+}
+
+.left_area h3{
+color: #fff;
+margin-top: -2%;
+text-transform: uppercase;
+font-size: 28px;
+font-weight: 900;
+}
+
+.left_area span{
+color: #19B3D3;
+}
+
+.sidebar {
+background: #29aae1;
+margin-top: -16px;
+padding-top: 30px;
+position: fixed;
+left: 0;
+width: 250px;
+height: 100%;
+transition: 0.5s;
+transition-property: left;
+
+}
+
+
+
+.sidebar h4{
+color: #ccc;
+margin-top: 0;
+margin-bottom: 20px;
+}
+
+.sidebar a{
+color: #fff;
+display: block;
+width: 100%;
+line-height: 60px;
+text-decoration: none;
+padding-left: 40px;
+box-sizing: border-box;
+transition: 0.5s;
+
+}
+
+.sidebar a:hover{
+background: #00489073;
+}
+
+.sidebar i{
+padding-right: 10px;
+}
+
+label #sidebar_btn{
+z-index: 1;
+color: #fff;
+position: fixed;
+cursor: pointer;
+left: 228px;
+font-size: 20px;
+margin: 5px 0;
+transition: 0.5s;
+transition-property: color;
+margin-top: -0.8%;
+}
+
+label #sidebar_btn:hover{
+color: #19B3D3;
+}
+
+#check:checked ~ .sidebar{
+left: -190px;
+}
+
+#check:checked ~ .sidebar a span{
+display: none;
+}
+
+#check:checked ~ .sidebar a{
+font-size: 20px;
+margin-left: 170px;
+width: 80px;
+}
+
+.content{
+margin-left: 250px;
+margin-top: 80px;
+
+}
+
+
+
+
+
+#check:checked ~ .content{
+margin-left: 60px;
+}
+
+#check{
+display: none;
+}
+.btn{
+  margin-left: 12px;
+  background: #29aae1;
+
+}
+
+
+      
+</style>
+
+<body>
+  <input type="checkbox" id="check">
+   
+    <div class="head">
+      <label for="check">
+        <i class="fas fa-bars" id="sidebar_btn"></i>
+      </label>
+      <div class="left_area">
+        <h3 >BANCO <span>UNIÓN</span></h3>
+      </div>
+    </div>
+     
+    
+    
+    <div class="sidebar">
+
+      <a routerLink="/domains"><i class="fas fa-bookmark"></i><span> Dominios</span></a>
+      <a routerLink="/users"><i class="fas fa-user"></i><span>Usuarios</span></a>
+     
+      <a routerLink="/formulariofiltrar"><i class="fas fa-calendar-alt"></i><span>Reportes</span></a>
+      <a  href="" ><i class="fas fa-exclamation-triangle" (click)="onLogout()"></i><span>Cerrar Sesión</span></a>
+    </div>
+    <div class="content">
+     
+   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+     Agregar Dominio
+   </button>
+   
+   
+   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+     <div class="modal-dialog">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h5 class="modal-title" id="exampleModalLabel">Agregar Dominio</h5>
+           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <div class="modal-body">
+          
+          <div class="mb-3 row">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Dominio</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" id="inputPassword">
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" id="inputPassword">
+            </div>
+          </div>
+
+
+         </div>
+         <div class="modal-footer">
+           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+           <button type="button" class="btn btn-primary">Guardar</button>
+         </div>
+       </div>
+     </div>
+   </div>
+   
+<br><br>
+   <table class="table">
+    <thead>
+      <tr class="table-success">
+        <th scope="col" > LISTA DOMINIOS</th>
+        <th scope="col"></th>
+      
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      <tr>
+        <th scope="col">NÚMERO</th>
+        <th scope="col">NOMBRE DOMINIO</th>
+        
+      </tr>
+   
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Dominio 1</td>
+        
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Dominio 2</td>
+        
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Dominio 3</td>
+        
+      </tr>
+    </tbody>
+  </table>
+   </div>
+    <div class="content2">
+      
+  
+</div>
+
+</body>
+
+
+
 
 
 

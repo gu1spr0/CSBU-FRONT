@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/servicios/api/api.service';
 
 @Component({
   selector: 'app-formulariofiltrar',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormulariofiltrarComponent implements OnInit {
 
-  constructor() { }
+  constructor( private apiService: ApiService) { }
 
   ngOnInit(): void {
   }
-
+  onLogout ():void{
+    this.apiService.logout();
+  }
 }

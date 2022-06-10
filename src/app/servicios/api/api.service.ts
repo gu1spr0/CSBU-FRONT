@@ -4,6 +4,7 @@ import{HttpBackend, HttpClient, HttpHeaders} from '@angular/common/http';
 import{Observable, observable} from'rxjs';
 import { Content } from 'src/app/modelos/content.interface';
 import { environment } from 'src/environments/environment';
+import {Router} from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
@@ -12,7 +13,8 @@ export class ApiService {
   url: string = environment.URL_API+"api/users/v1/login"
   constructor(
     private http: HttpClient,
-    private handler: HttpBackend) { 
+    private handler: HttpBackend,
+    private router: Router) { 
       this.http = new HttpClient(this.handler);
     }
 
@@ -37,4 +39,22 @@ export class ApiService {
   close(){
     localStorage.clear();
   }
+
+  //cerrar sesion
+
+  public logout():void
+  {
+    localStorage.removeItem('token');
+    localStorage.removeItem('agencia');
+    localStorage.removeItem('canal');
+    this.router.navigate(['login']);
+  }
+
+  //mantener sesion iniciada
+  public verifyLogged():boolean{
+    const token=localStorage.getItem('token');
+    return token ? true :false;
+  }
+  ////////////////////////
+  
 }

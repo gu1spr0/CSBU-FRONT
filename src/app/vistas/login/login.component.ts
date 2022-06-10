@@ -27,8 +27,12 @@ export class LoginComponent implements OnInit {
   constructor(
     private api:ApiService,
     private router:Router) {}
-
+//mantener sesion iniciada por token
   ngOnInit(): void {
+    if(this.api.verifyLogged()){
+      this.router.navigate(['dashboard']);
+    }
+    //////////////////////
   }
   onLogin(form:LoginI){
   this.api.loginbyEmail(form).subscribe(data =>{
