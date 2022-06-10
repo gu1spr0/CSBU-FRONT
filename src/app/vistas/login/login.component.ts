@@ -38,6 +38,7 @@ export class LoginComponent implements OnInit {
    localStorage.setItem("token",content.data.token);
    localStorage.setItem("agencia",""+content.data.idAgency);
    localStorage.setItem("canal",""+content.data.idChannel);
+   localStorage.setItem("username",content.data.username);
    this.router.navigate(['/pespera']);
    
   });

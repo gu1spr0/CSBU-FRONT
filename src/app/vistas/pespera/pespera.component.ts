@@ -25,8 +25,8 @@ export class PesperaComponent {
       let stompClient = this.socket.connect();
       stompClient.connect({"X-Authorization":"Bearer "+api.getUserTokken()}, (frame: any) => {
         //stompClient.subscribe('/topic/'+api.getUserAgency()+'/'+api.getUserChannel(), (notifications: any) => {
-        stompClient.subscribe('/user/queue/'+this.api.getUserAgency()+'/'+this.api.getUserChannel(), (notifications: any) => {
-          console.log(notifications)
+        stompClient.subscribe(`/user/${api.getUsername()}/msg/${api.getUserAgency()}/${api.getUserChannel()}`, (notifications: any) => {
+          this.showGreeting(JSON.stringify(notifications.body))
           //this.showGreeting(notifications);
         });
       });

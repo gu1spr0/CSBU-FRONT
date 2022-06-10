@@ -8,8 +8,8 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class ApiService {
-  url:string = "http://178.62.200.136:4701/api/users/v1/login";
-  //url: string = environment.URL_API+"api/users/v1/login"
+  //url:string = "http://178.62.200.136:4701/api/users/v1/login";
+  url: string = environment.URL_API+"api/users/v1/login"
   constructor(
     private http: HttpClient,
     private handler: HttpBackend) { 
@@ -30,6 +30,9 @@ export class ApiService {
   }
   getUserChannel(){
     return localStorage.getItem('canal');
+  }
+  getUsername(){
+    return localStorage.getItem('username')
   }
   close(){
     localStorage.clear();
