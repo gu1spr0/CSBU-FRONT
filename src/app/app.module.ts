@@ -11,6 +11,7 @@ import { PaginalogoComponent } from './vistas/paginalogo/paginalogo.component';
 import { PesperaComponent } from './vistas/pespera/pespera.component';
 import { TokenInterceptor } from './token.interceptor';
 import { BackofficeComponent, DomainsComponent, UsersComponent } from './vistas/index.paginas';
+import { DifusionComponent } from './vistas/difusion/difusion.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { BackofficeComponent, DomainsComponent, UsersComponent } from './vistas/
     PesperaComponent,
     BackofficeComponent,
     DomainsComponent,
-    UsersComponent
+    UsersComponent,
+    DifusionComponent
   ],
   imports: [
     BrowserModule,

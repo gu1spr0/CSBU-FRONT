@@ -11,19 +11,17 @@ import { WebsocketService } from 'src/app/servicios/websocket/websocket.service'
   
 })
 export class DashboardComponent implements OnInit {
+ 
 
   constructor(
     private socket: WebsocketService,
     private auth: ApiService,
-    private router: Router
+    private router: Router,
+    private apiService: ApiService
   ) { }
 
   ngOnInit(): void {
   }
-  logout(){
-    this.auth.close();
-    this.socket._disconnect();
-    this.router.navigate(['/login']);
-  }
+  
 
 }

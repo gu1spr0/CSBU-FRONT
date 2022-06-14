@@ -8,7 +8,8 @@ import {
     LoginComponent,
     PaginalogoComponent,
     PesperaComponent,
-    UsersComponent
+    UsersComponent,
+    DifusionComponent,
 } from"./vistas/index.paginas";
 
 const app_routes : Routes=[
@@ -19,6 +20,7 @@ const app_routes : Routes=[
     {path: 'pespera', component: PesperaComponent},
     {path: 'backoffice', component: BackofficeComponent},
     {path:'domains', component: DomainsComponent},
-    {path:'users', component: UsersComponent}
+    {path:'users', component: UsersComponent},
+    {path:'difusion', component: DifusionComponent},
 ] 
 export const app_routing = RouterModule.forRoot(app_routes,{useHash:true});
