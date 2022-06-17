@@ -37,8 +37,10 @@ export class PesperaComponent {
       this.socket._disconnect();
       setTimeout(() => {
         location.reload();
-      }, 500);
+      }, 5000);
     }
+
+    
    this.router.navigate(['/dashboard']);
   }
 
