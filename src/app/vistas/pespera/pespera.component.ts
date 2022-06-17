@@ -33,12 +33,13 @@ export class PesperaComponent {
     }
   }
   showGreeting(message: any) {
-    if (message === 'null') {
+    if (message === 'null' || message != true) {
       this.socket._disconnect();
       setTimeout(() => {
         location.reload();
       }, 500);
     }
+    console.log(message);
     this.router.navigate(['/dashboard']);
   }
 }
