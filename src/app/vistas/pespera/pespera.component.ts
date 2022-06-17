@@ -39,6 +39,8 @@ export class PesperaComponent {
         location.reload();
       }, 500);
     }
-    this.router.navigate(['/dashboard']);
+   this.router.navigate(['/dashboard']);
   }
+
+
 }

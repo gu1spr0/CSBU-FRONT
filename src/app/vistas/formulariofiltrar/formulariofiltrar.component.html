@@ -21,10 +21,26 @@ height: 65px;
 left: 0%;
 top: 0%;
 }
+.titulo
+{
+  position: absolute;
+  padding: 20px;
+  height: 60px;
+  left: 0%;
+  top: 0%;
+}
+.amb
+{
+  position: absolute;
+  padding: 20px;
+  height: 60px;
+  left: 0%;
+  top: 0%;
+}
 
 .left_area h3{
 color: #fff;
-margin-top: -2%;
+
 text-transform: uppercase;
 font-size: 28px;
 font-weight: 900;
@@ -85,7 +101,7 @@ font-size: 20px;
 margin: 5px 0;
 transition: 0.5s;
 transition-property: color;
-margin-top: -0.8%;
+margin-top: -9px;
 }
 
 label #sidebar_btn:hover{
@@ -122,8 +138,8 @@ box-shadow: 1px 1px 5px rgb(170, 165, 165);
 
 
 #check:checked ~ .content{
-margin-left: 250px;
-margin-right: 250px;
+margin-left: 200px;
+margin-right: 300px;
 }
 
 #check{
@@ -148,8 +164,8 @@ border-radius: 15px;
 box-shadow: 1px 1px 5px rgb(170, 165, 165);
 }
 #check:checked ~ .content2{
-margin-left: 250px;
-margin-right: 250px;
+margin-left: 200px;
+margin-right: 300px;
 
 }
 
@@ -159,15 +175,20 @@ margin-right: 250px;
 
 <body>
   <input type="checkbox" id="check">
-   
-    <div class="head">
-      <label for="check">
-        <i class="fas fa-bars" id="sidebar_btn"></i>
-      </label>
-      <div class="left_area">
-        <h3 >BANCO <span>UNIÓN</span></h3>
-      </div>
+  <div class="head">
+    
+  </div>
+  <div class="titulo">
+  
+    <div class="left_area">
+      <h3 >BANCO <span>UNIÓN</span></h3>
     </div>
+  </div>
+  <div class="amb">
+    <label for="check">
+      <i class="fas fa-bars" id="sidebar_btn"></i>
+    </label>
+  </div>
      
     
     

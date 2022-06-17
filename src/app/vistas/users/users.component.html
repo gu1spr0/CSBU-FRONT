@@ -21,10 +21,25 @@ height: 65px;
 left: 0%;
 top: 0%;
 }
+.titulo
+{
+  position: absolute;
+  padding: 20px;
+  height: 60px;
+  left: 0%;
+  top: 0%;
+}
+.amb
+{
+  position: absolute;
+  padding: 20px;
+  height: 60px;
+  left: 0%;
+  top: 0%;
+}
 
 .left_area h3{
 color: #fff;
-margin-top: -2%;
 text-transform: uppercase;
 font-size: 28px;
 font-weight: 900;
@@ -85,7 +100,7 @@ font-size: 20px;
 margin: 5px 0;
 transition: 0.5s;
 transition-property: color;
-margin-top: -0.8%;
+margin-top: -9px;
 }
 
 label #sidebar_btn:hover{
@@ -111,11 +126,6 @@ margin-left: 250px;
 margin-top: 80px;
 
 }
-
-
-
-
-
 #check:checked ~ .content{
 margin-left: 60px;
 }
@@ -126,7 +136,6 @@ display: none;
 .btn{
   margin-left: 12px;
   background: #29aae1;
-
 }
 
 
@@ -134,16 +143,24 @@ display: none;
 </style>
 
 <body>
+ 
   <input type="checkbox" id="check">
-   
     <div class="head">
-      <label for="check">
-        <i class="fas fa-bars" id="sidebar_btn"></i>
-      </label>
+      
+    </div>
+    <div class="titulo">
+    
       <div class="left_area">
         <h3 >BANCO <span>UNIÓN</span></h3>
       </div>
     </div>
+    <div class="amb">
+      <label for="check">
+        <i class="fas fa-bars" id="sidebar_btn"></i>
+      </label>
+    </div>
+    
+
      
     
     
@@ -177,6 +194,7 @@ display: none;
               <input type="password" class="form-control" id="inputPassword">
             </div>
           </div>
+          
           <div class="mb-3 row">
             <label for="inputPassword" class="col-sm-2 col-form-label">Rol</label>
             <div class="col-sm-10">
@@ -214,9 +232,7 @@ display: none;
         <th scope="col">NÚMERO</th>
         <th scope="col">NOMBRE DE USUARIO</th>
         <th scope="col">ROL DE USUARIO</th>
-        
-      </tr>
-   
+      </tr>  
     <tbody>
       <tr>
         <th scope="row">1</th>
@@ -237,6 +253,4 @@ display: none;
     </tbody>
   </table>
    </div>
-   
-
 </body>
