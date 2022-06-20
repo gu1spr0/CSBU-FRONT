@@ -26,7 +26,7 @@ export class TokenInterceptor implements HttpInterceptor {
       console.log("Token Agregado");
       request = req.clone({
         setHeaders: {
-          authorization: `Bearer ${token}`,
+          Authorization: `Bearer ${token}`,
         },
       });
     }
