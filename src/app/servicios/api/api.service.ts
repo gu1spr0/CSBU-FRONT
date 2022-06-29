@@ -9,6 +9,9 @@ import {Router} from '@angular/router';
   providedIn: 'root'
 })
 export class ApiService {
+  get() {
+    throw new Error('Method not implemented.');
+  }
   //url:string = "http://178.62.200.136:4701/api/users/v1/login";
   url: string = environment.URL_API+"api/users/v1/login"
   constructor(
@@ -50,11 +53,17 @@ export class ApiService {
     this.router.navigate(['login']);
   }
 
-  //mantener sesion iniciada
+  //verifica si no hay token
   public verifyLogged():boolean{
     const token=localStorage.getItem('token');
-    return token ? true :false;
+    return token ? false :true;
   }
-  ///
+  
+
+  //consumir api get domains
+  public getdomains(url:string){
+    return this.http.get(url);
+
+  }
   
 }

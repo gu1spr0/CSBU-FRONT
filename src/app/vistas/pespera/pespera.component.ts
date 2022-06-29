@@ -39,10 +39,15 @@ export class PesperaComponent {
         location.reload();
       }, 5000);
     }
-
-    
    this.router.navigate(['/dashboard']);
   }
 
+  //verifica si no hay token
+  ngOnInit(): void {
+    if(this.api.verifyLogged()){
+      this.router.navigate(['login']);
+    }
+
+  }
 
 }
